@@ -1,0 +1,118 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 0.7543128599770712,
+        "y": 4.483681039434152
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 0.7450681568029801,
+        "y": 3.9012647394664164
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 2.71418993288437,
+        "y": 4.086158802948237
+      },
+      "prevControl": {
+        "x": 1.7153217951599347,
+        "y": 4.038593653532787
+      },
+      "nextControl": {
+        "x": 2.9083286995402817,
+        "y": 4.095403506122328
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 1.3459738631188973,
+        "y": 3.559210722025048
+      },
+      "prevControl": {
+        "x": 1.5863361456452643,
+        "y": 3.3743166585432274
+      },
+      "nextControl": {
+        "x": 1.1056115805925304,
+        "y": 3.7441047855068685
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 0.7820469694993443,
+        "y": 4.520659852130516
+      },
+      "prevControl": {
+        "x": 0.966941032981165,
+        "y": 4.141627021992783
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": null
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 0.5,
+      "rotationDegrees": 0,
+      "rotateFast": true
+    },
+    {
+      "waypointRelativePos": 2,
+      "rotationDegrees": -61.073574164746375,
+      "rotateFast": false
+    },
+    {
+      "waypointRelativePos": 1,
+      "rotationDegrees": 0,
+      "rotateFast": false
+    }
+  ],
+  "constraintZones": [],
+  "eventMarkers": [
+    {
+      "name": "New Event Marker",
+      "waypointRelativePos": 0.5,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "Run_Note_Intake"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 0.5,
+    "maxAcceleration": 1.0,
+    "maxAngularVelocity": 180.0,
+    "maxAngularAcceleration": 180.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": -60.06848815949224,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "Source Paths",
+  "previewStartingState": {
+    "rotation": -60.06848815949225,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

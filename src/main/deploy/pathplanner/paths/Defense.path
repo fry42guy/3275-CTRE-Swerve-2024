@@ -1,0 +1,218 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 0.7509152340242001,
+        "y": 4.432084533684738
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 0.7509152340242002,
+        "y": 2.6302357987174303
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 5.697542563176294,
+        "y": 0.7367317298737166
+      },
+      "prevControl": {
+        "x": 4.699309411441478,
+        "y": 0.7961503698579324
+      },
+      "nextControl": {
+        "x": 6.679851536341248,
+        "y": 0.6782609576615165
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 8.281950694955519,
+        "y": 0.7718141932010376
+      },
+      "prevControl": {
+        "x": 8.325878671700362,
+        "y": 0.7776612704222574
+      },
+      "nextControl": {
+        "x": 8.238022718210676,
+        "y": 0.7659671159798178
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 6.49274506526221,
+        "y": 2.2803601162757885
+      },
+      "prevControl": {
+        "x": 6.70282537872055,
+        "y": 2.0927884078308425
+      },
+      "nextControl": {
+        "x": 6.1653087408738925,
+        "y": 2.5727139773367864
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 8.281950694955519,
+        "y": 2.4206899695850677
+      },
+      "prevControl": {
+        "x": 7.279950809891973,
+        "y": 2.439959198143981
+      },
+      "nextControl": {
+        "x": 8.890046725962398,
+        "y": 2.408995815142628
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 6.282250285298291,
+        "y": 3.85907096600518
+      },
+      "prevControl": {
+        "x": 6.785098926323208,
+        "y": 3.5550229505017406
+      },
+      "nextControl": {
+        "x": 5.8675906731694845,
+        "y": 4.109795382641204
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 8.165009150531121,
+        "y": 4.1046482092964185
+      },
+      "prevControl": {
+        "x": 6.7967930807656485,
+        "y": 4.116342363738859
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": null
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 2,
+      "rotationDegrees": 0,
+      "rotateFast": false
+    },
+    {
+      "waypointRelativePos": 2,
+      "rotationDegrees": 0,
+      "rotateFast": false
+    },
+    {
+      "waypointRelativePos": 1,
+      "rotationDegrees": 0,
+      "rotateFast": false
+    }
+  ],
+  "constraintZones": [],
+  "eventMarkers": [
+    {
+      "name": "New Event Marker",
+      "waypointRelativePos": 1.5,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "Run_Note_Intake"
+              }
+            },
+            {
+              "type": "named",
+              "data": {
+                "name": "AutoAim&ShootStop"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "New Event Marker",
+      "waypointRelativePos": 3.7,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "Run_Note_Intake"
+              }
+            },
+            {
+              "type": "named",
+              "data": {
+                "name": "AutoAim&ShootStop"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "New Event Marker",
+      "waypointRelativePos": 5.75,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "Run_Note_Intake"
+              }
+            },
+            {
+              "type": "named",
+              "data": {
+                "name": "AutoAim&ShootStop"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 0.5,
+    "maxAcceleration": 1.0,
+    "maxAngularVelocity": 180.0,
+    "maxAngularAcceleration": 180.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 0,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": null,
+  "previewStartingState": {
+    "rotation": -60.64224645720876,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

@@ -1,0 +1,55 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 0.6807503073695607,
+      "y": 6.642279723305886
+    },
+    "rotation": 60.0
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "named",
+          "data": {
+            "name": "AutoAim&ShootStop"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Amp 1n"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "AutoAim&ShootStop"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Amp2n"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "AutoAim&ShootStop"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Amp3n"
+          }
+        }
+      ]
+    }
+  },
+  "folder": "Amp",
+  "choreoAuto": false
+}

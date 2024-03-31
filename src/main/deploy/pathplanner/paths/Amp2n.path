@@ -1,0 +1,129 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 0.7543128599770712,
+        "y": 6.591473363126907
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 1.7543128599770648,
+        "y": 6.591473363126907
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 5.820410199378957,
+        "y": 7.414251945621009
+      },
+      "prevControl": {
+        "x": 4.820410199378957,
+        "y": 7.414251945621009
+      },
+      "nextControl": {
+        "x": 6.820410199378957,
+        "y": 7.414251945621009
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 8.214788321468534,
+        "y": 7.441986055143282
+      },
+      "prevControl": {
+        "x": 7.484456770715343,
+        "y": 7.441986055143282
+      },
+      "nextControl": {
+        "x": 8.556842338909902,
+        "y": 7.441986055143282
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 5.801920793030774,
+        "y": 7.414251945621009
+      },
+      "prevControl": {
+        "x": 6.171057024911748,
+        "y": 7.438067186387523
+      },
+      "nextControl": {
+        "x": 4.942163397840309,
+        "y": 7.358783726576463
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 0.7728022663252532,
+        "y": 6.554494550430542
+      },
+      "prevControl": {
+        "x": 0.976185736155256,
+        "y": 7.414251945621009
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": null
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 1,
+      "rotationDegrees": 0,
+      "rotateFast": false
+    },
+    {
+      "waypointRelativePos": 2,
+      "rotationDegrees": 0,
+      "rotateFast": false
+    }
+  ],
+  "constraintZones": [],
+  "eventMarkers": [
+    {
+      "name": "New Event Marker",
+      "waypointRelativePos": 1.4,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "Run_Note_Intake"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 0.5,
+    "maxAcceleration": 1.0,
+    "maxAngularVelocity": 180.0,
+    "maxAngularAcceleration": 180.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 60.461217740441874,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "AmpPaths",
+  "previewStartingState": {
+    "rotation": 58.781597235653656,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

@@ -1,0 +1,56 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 0.7336934388833163,
+      "y": 4.3678916811515345
+    },
+    "rotation": -61.98305858414457
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "sequential",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "AutoAim&ShootStop"
+                }
+              },
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "Source1n"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "AutoAim&ShootStop"
+                }
+              },
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "Source 2n"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "AutoAim&ShootStop"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "folder": "Source",
+  "choreoAuto": false
+}
