@@ -95,18 +95,18 @@ Rotation2d offsetrotation;
 
  if (ally.get() == Alliance.Red){
 
- offsetrotation = new Rotation2d(Units.degreesToRadians(5));
+ offsetrotation = new Rotation2d(Units.degreesToRadians(0));
 
  }
 
  if (ally.get() == Alliance.Blue){
 
-offsetrotation = new Rotation2d(Units.degreesToRadians(175));
+offsetrotation = new Rotation2d(Units.degreesToRadians(180));
 
 }
 
 else {
-  offsetrotation = new Rotation2d(Units.degreesToRadians(175));
+  offsetrotation = new Rotation2d(Units.degreesToRadians(180));
 }
 
 System.out.println(ally.get());
@@ -139,7 +139,7 @@ public double absbyPostSetpointSpeaker(){
 
 double dist = AbsDistToSpeaker(RobotPose2D);
 
-Double ArmSetpoint = ((0.2403 * Math.pow(dist,4)) + (- 3.4518 * Math.pow(dist,3)) + (12.502 * Math.pow(dist,2)) + (18.124 * dist) + (-27.503))  ;         //y = 0.2403x4 - 3.4518x3 + 12.502x2 + 18.124x - 27.503
+Double ArmSetpoint = ((-2.2458 * Math.pow(dist,4)) + (21.617 * Math.pow(dist,3)) + (-75.155 * Math.pow(dist,2)) + (108.56 * dist) + (-44.278))  ;         //y = 0.2403x4 - 3.4518x3 + 12.502x2 + 18.124x - 27.503
 
   return ArmSetpoint;
 

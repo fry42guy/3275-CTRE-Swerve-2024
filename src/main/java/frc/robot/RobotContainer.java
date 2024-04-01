@@ -17,6 +17,7 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 
 import com.ctre.phoenix6.Utils;
 
+import frc.robot.commands.ArmPivot.AutoTargetPIDPivotCommand;
 import frc.robot.commands.ArmPivot.PIDPivotCommand;
 import frc.robot.commands.Climber.ClimberFWD;
 import frc.robot.commands.Climber.ClimberREV;
@@ -26,6 +27,7 @@ import frc.robot.commands.Intake.IntakeFWDWithSensor;
 import frc.robot.commands.Intake.IntakeREV;
 import frc.robot.commands.Shooter.AutoPIDShooterCommand;
 import frc.robot.commands.Shooter.PIDShooterCommand;
+import frc.robot.commands.Shooter.PIDsetRPMShooterCommand;
 import frc.robot.commands.Shooter.ShootSpeedSame;
 import frc.robot.generated.TunerConstants;
 import frc.robot.subsystems.ArmSubsystem;
@@ -91,6 +93,7 @@ public class RobotContainer
   {
   
   m_ArmSubsystem.setDefaultCommand(new PIDPivotCommand(m_ArmSubsystem));
+
     drivetrain.setDefaultCommand
     (
       drivetrain.applyRequest(() -> drive.withVelocityX(-Math.pow(m_driverController.getLeftY(),3) * MaxSpeed)
@@ -125,6 +128,18 @@ m_driverController.povLeft().toggleOnTrue( drivetrain.applyRequest(() -> driveFa
     
     m_driverController.b().toggleOnTrue(new PIDPivotCommand(m_ArmSubsystem));
 
+
+    m_driverController.rightStick().toggleOnTrue(new ParallelCommandGroup( drivetrain.applyRequest(() -> driveFaceinangle.withVelocityX(-Math.pow(m_driverController.getLeftY(),3) * MaxSpeed)
+.withVelocityY(-Math.pow(m_driverController.getLeftX(),3) * MaxSpeed)
+
+.withTargetDirection(m_Calcs2.AbsRotationToTag(m_Calcs2.TargetID,drivetrain.getrobotpose()).minus(drivetrain.Getoffsetroation()))),
+new AutoTargetPIDPivotCommand(m_ArmSubsystem, false)//,
+//new PIDShooterCommand(m_ShooterSubsystem,4000)
+)//.beforeStarting(new PIDsetRPMShooterCommand(m_ShooterSubsystem, 4000))
+// .beforeStarting(
+// drivetrain.runOnce(()-> drivetrain.ConfigLimelightAutoshoot())
+// )
+.until(m_driverController.axisGreaterThan(5,.3).or(m_driverController.axisLessThan(5,-.3))));
 
    // m_driverController.povRight().onTrue(drivetrain.runOnce(()-> drivetrain.Uppdateseededroation()));
 

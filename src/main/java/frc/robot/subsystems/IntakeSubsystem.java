@@ -21,36 +21,39 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class IntakeSubsystem extends SubsystemBase {
 
   private final TalonFX IntakeMotor;
-  private final CANSparkMax secondaryIntake;
-  private SparkPIDController SIPID;
-  private RelativeEncoder enc;
-  public double kP, kI, kD, kIz, kFF, kMax, kMin, maxRPM;
+  private final TalonFX IntakeMotor2;
+  //private final CANSparkMax secondaryIntake;
+  // private SparkPIDController SIPID;
+  // private RelativeEncoder enc;
+  // public double kP, kI, kD, kIz, kFF, kMax, kMin, maxRPM;
   private final DigitalInput RangeFinder;
 
   /** Creates a new Intake. */
   public IntakeSubsystem() {
 
 IntakeMotor = new TalonFX(Constants.Intake.IntakeMotorID);
-IntakeMotor.setInverted(true);
+IntakeMotor.setInverted(false);
+IntakeMotor2 = new TalonFX(Constants.Intake.IntakeMotorID2);
+IntakeMotor2.setInverted(true);
 
-secondaryIntake = new CANSparkMax(20, CANSparkLowLevel.MotorType.kBrushless);
-secondaryIntake.setInverted(true);
-SIPID = secondaryIntake.getPIDController();
-enc = secondaryIntake.getEncoder();
-kP = 6e-5;
-kI = 0;
-kD = 0;
-kIz = 0;
-kFF = 0.000015;
-kMax = 1;
-kMin = -1;
-maxRPM = 3000;
-SIPID.setP(kP);
-SIPID.setI(kI);
-SIPID.setD(kD);
-SIPID.setIZone(kIz);
-SIPID.setFF(kFF);
-SIPID.setOutputRange(kMin, kMax);
+// secondaryIntake = new CANSparkMax(20, CANSparkLowLevel.MotorType.kBrushless);
+// secondaryIntake.setInverted(true);
+// SIPID = secondaryIntake.getPIDController();
+// enc = secondaryIntake.getEncoder();
+// kP = 6e-5;
+// kI = 0;
+// kD = 0;
+// kIz = 0;
+// kFF = 0.000015;
+// kMax = 1;
+// kMin = -1;
+// maxRPM = 3000;
+// SIPID.setP(kP);
+// SIPID.setI(kI);
+// SIPID.setD(kD);
+// SIPID.setIZone(kIz);
+// SIPID.setFF(kFF);
+// SIPID.setOutputRange(kMin, kMax);
 RangeFinder = new DigitalInput(3);
 
 //RangeFinder.setAutomaticMode(true);
@@ -62,7 +65,8 @@ RangeFinder = new DigitalInput(3);
 
   public void setspeed(Double speed){
 IntakeMotor.set(speed);
-secondaryIntake.set(speed * 0.75);
+IntakeMotor2.set(speed);
+//secondaryIntake.set(speed * 0.75);
 //SIPID.setReference(maxRPM, ControlType.kSmartVelocity);
 
   }
@@ -78,7 +82,8 @@ secondaryIntake.set(speed * 0.75);
 public void Stop(){
 
   IntakeMotor.set(0);
-  secondaryIntake.set(0);
+  IntakeMotor2.set(0);
+  //secondaryIntake.set(0);
 }
 
 

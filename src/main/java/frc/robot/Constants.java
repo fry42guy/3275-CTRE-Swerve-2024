@@ -50,7 +50,7 @@ public class Constants
       public static class Intake{
     
         public static final int IntakeMotorID = 53;
-     
+     public static final int IntakeMotorID2 = 54;
       public static final Double FWDSpeed = 0.66; 
       public static final Double REVSpeed = -0.66;
     
@@ -62,7 +62,7 @@ public class Constants
       public static final int RightShooterID = 46;
     
       public static final Double SlowSpeed = 1550.0;
-      public static final Double FastSpeed = 5500.0;
+      public static final Double FastSpeed = 4500.0;
       public static final Double SameSpeed = .75; //Not Used
       public static final Double TopSpeed = 0.6; //Not used
       public static final Double BottomSpeed = 0.4;//Not used

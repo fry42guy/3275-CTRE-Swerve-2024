@@ -44,7 +44,7 @@ public class AutoZeroPivotCommand extends Command {
 
    
 
-configTalon();
+
 
   }
 
@@ -94,25 +94,7 @@ configTalon();
   }
 
 
-public void configTalon(){
 
-TalonFXConfiguration ArmCofig = new TalonFXConfiguration();
-//Rightconfig.Slot0.kV = 0.12;
-ArmCofig.Slot0.kP = 2;
-ArmCofig.Slot0.kI = 1;
-ArmCofig.Slot0.kD = 0;
-
-ArmCofig.MotorOutput.NeutralMode = NeutralModeValue.Brake;
-
-
-ArmCofig.TorqueCurrent.PeakForwardTorqueCurrent = 40;
-ArmCofig.TorqueCurrent.PeakReverseTorqueCurrent = -40;
-
-
-
-m_ArmSubsystem.PivotMotor.getConfigurator().apply(ArmCofig,.05);
-
-}
 
 
 

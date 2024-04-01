@@ -46,7 +46,7 @@ m_Calcs2 = RobotContainer.m_Calcs2;
 
    
 
-configTalon();
+
 
   }
 
@@ -108,25 +108,9 @@ if (withEnd){
   }
 
 
-public void configTalon(){
-
-TalonFXConfiguration ArmCofig = new TalonFXConfiguration();
-//Rightconfig.Slot0.kV = 0.12;
-ArmCofig.Slot0.kP = 3;
-ArmCofig.Slot0.kI = 20;
-ArmCofig.Slot0.kD = 0;
-
-ArmCofig.MotorOutput.NeutralMode = NeutralModeValue.Brake;
-
-
-ArmCofig.TorqueCurrent.PeakForwardTorqueCurrent = 40;
-ArmCofig.TorqueCurrent.PeakReverseTorqueCurrent = -40;
 
 
 
-m_ArmSubsystem.PivotMotor.getConfigurator().apply(ArmCofig,.05);
-
-}
 
 
 

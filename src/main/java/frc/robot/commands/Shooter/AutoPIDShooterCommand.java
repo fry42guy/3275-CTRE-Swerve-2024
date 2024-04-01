@@ -129,7 +129,7 @@ Delaytimer.stop();
 
      if (setPoint * 1.05 > m_ShooterSubsystem.GetLeftShooterRPM() && m_ShooterSubsystem.GetLeftShooterRPM() > setPoint *0.95 && Delaytimer.get() > StableDelay ){
 
-m_IntakeSubsystem.setspeed(-Constants.Intake.FWDSpeed);
+m_IntakeSubsystem.setspeed(Constants.Intake.FWDSpeed);
      
 //System.out.println(shoottime.get());
 

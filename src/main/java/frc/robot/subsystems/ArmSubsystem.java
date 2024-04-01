@@ -89,7 +89,7 @@ TalonFXConfiguration toConfigure = new TalonFXConfiguration();
     toConfigure.SoftwareLimitSwitch.withReverseSoftLimitThreshold(0);
     toConfigure.SoftwareLimitSwitch.withForwardSoftLimitEnable(true);
     toConfigure.SoftwareLimitSwitch.withReverseSoftLimitEnable(true);
-toConfigure.MotorOutput.Inverted = InvertedValue.CounterClockwise_Positive;
+toConfigure.MotorOutput.Inverted = InvertedValue.Clockwise_Positive;
 
     toConfigure.Slot0.kP = 3;
     toConfigure.Slot0.kI = 1;
